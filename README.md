@@ -3,7 +3,7 @@ Shopping cart API
 
 API to manage Customers, Products and Shopping Carts.
 
-In order to increase the sales amount, the API has a promotional strategy to attract Customers. This promotional strategy for each 3 items added to the cart, the cart will provide a discount equivalent to 1 item. This item being the lowest priced. The analysis for the lowest priced item takes into account the quantity chosen per product.
+In order to increase the sales amount, the API has a promotional strategy to attract Customers. This promotional strategy for each 3 items added to the cart, the cart will provide a discount equivalent to 1 item. This item being the lowest priced. The analysis for the lowest priced item takes into account the quantity per product.
 
 
 ## Tech details
@@ -83,3 +83,21 @@ GET http://localhost:8000/shoppingcarts/{shopping_cart_id}
 ```
 
 API with 94% of test coverage, with tests that validate all the requirements.
+
+To run the tests must have the postgreSQL container running.
+
+Create a python enviroment and activate it:
+```
+python3 -m venv env
+source env/bin/activate
+```
+
+Install the depencies locally in the enviroment:
+```
+pip install -r requirements.txt
+```
+
+Run pytest command:
+```
+pytest --cov=.
+```
