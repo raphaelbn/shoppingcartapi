@@ -3,7 +3,7 @@ Shopping cart API
 
 API to manage Customers, Products and Shopping Carts.
 
-In order to increase the sales amount, the API has a promotional strategy to attract Customers. This promotional strategy for each 3 items added to the cart, the cart will provide a discount equivalent to 1 item. This item being the lowest priced. The analysis for the lowest priced item takes into account the quantity per product.
+In order to increase the sales amount, the API has a promotional strategy to attract Customers. This promotional strategy for each 3 items added to the cart, the cart will provide a discount equivalent to 1 item. This item being the lowest priced.
 
 
 ## Tech details
@@ -76,7 +76,7 @@ DELETE http://localhost:8000/shoppingcarts/{shopping_cart_id}/products/{product_
 
 ```
 
-### Get shopping cart informatioin
+### Get shopping cart information
 Here all information about the shopping cart will be presented, including the total_price.
 ```
 GET http://localhost:8000/shoppingcarts/{shopping_cart_id}

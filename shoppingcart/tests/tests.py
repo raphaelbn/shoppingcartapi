@@ -95,7 +95,7 @@ def test_check_price_of_shopping_cart_with_1_tshirt_2_jeans_3_dress(client, shop
     response = client.get(url)
 
     assert response.status_code, status.HTTP_200_OK
-    assert response.data['total_price'], Decimal('86.95')
+    assert response.data['total_price'], Decimal('91.30')
 
 
 def test_shoppingcart_representation(client, default_shoppingcart):

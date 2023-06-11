@@ -16,7 +16,7 @@ class PromotionalPricing(Pricing):
 
         itens_to_discount = total_itens // 3
         total_discount = 0
-        for shoppingcartproduct in sorted(shoppingcart.shoppingcartproduct.all(), key=lambda item: item.item_price):
+        for shoppingcartproduct in sorted(shoppingcart.shoppingcartproduct.all(), key=lambda item: item.product.price):
             if shoppingcartproduct.quantity < itens_to_discount:
                 total_discount += (shoppingcartproduct.product.price * shoppingcartproduct.quantity)
                 itens_to_discount -= shoppingcartproduct.quantity

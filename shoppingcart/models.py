@@ -43,7 +43,3 @@ class ShoppingCartProduct(TimesTampedModel):
     shoppingcart = models.ForeignKey(ShoppingCart, related_name='shoppingcartproduct', on_delete=models.CASCADE)
     product = models.ForeignKey(Product, related_name='shoppingcartproduct', on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1, validators=[MinValueValidator(1)])
-
-    @property
-    def item_price(self):
-        return self.product.price * self.quantity

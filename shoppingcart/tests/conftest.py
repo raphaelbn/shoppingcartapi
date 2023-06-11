@@ -46,7 +46,7 @@ def shoppingcart_with_2_tshirts_2_jeans(default_shoppingcart):
 def shoppingcart_with_1_tshirt_2_jeans_3_dress(default_shoppingcart):
     tshirt = ProductFactory.create_batch(size=1, name='t-shirt', price=Decimal('12.99'))[0]
     jeans = ProductFactory.create_batch(size=1, name='jeans', price=Decimal('25.00'))[0]
-    dress = ProductFactory.create_batch(size=1, name='jeans', price=Decimal('20.65'))[0]
+    dress = ProductFactory.create_batch(size=1, name='dress', price=Decimal('20.65'))[0]
     ShoppingCartProductFactory.create_batch(size=1, shoppingcart=default_shoppingcart, product=tshirt, quantity=1)[0]
     ShoppingCartProductFactory.create_batch(size=1, shoppingcart=default_shoppingcart, product=jeans, quantity=2)[0]
     ShoppingCartProductFactory.create_batch(size=1, shoppingcart=default_shoppingcart, product=dress, quantity=3)[0]
